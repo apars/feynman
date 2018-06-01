@@ -1,13 +1,14 @@
-  <div class="container">
+  <div class="container-fluid imageloc">
     <div class="row">
       <div class="col-md-12">
+        <img class="d-block img-responsive w-100 imagecenter" src="<?php echo base_url().$this->config->item('main_back'); ?>" alt="Main_Back">
         <?php if(isset($active_surveys) && $active_surveys != null): ?>
-          <h2 style="text-align: center"><br>The results of this survey will teach us insights on how we can serve you better. <br><br>
+          <div class="floatdiv" style="width: 95%;left: 2.5%">
+          <h2 style="text-align: center; color: white;text-shadow: 2px 2px 4px #000000;"><br>The results of this survey will teach us insights on how we can serve you better. <br><br>
 Yes, we realize how precious your time is. That's why we made sure this survey will
 only take 30 seconds or less.<br><br>
-
 (really, we timed it!)<br><br>
-Rate us: 1 BAD to 5 BEST</h2>
+Rate us: 1 BAD to 5 BEST<br><br><br></h2>
           <div style="width: 30%;margin: 0 auto;">
             <?php foreach($active_surveys as $survey): ?>
 <!--              <a href="<?php echo base_url() . "questions/" . $survey->slug; ?>" class="list-group-item" style="text-align: center">
@@ -31,6 +32,8 @@ Rate us: 1 BAD to 5 BEST</h2>
               It seems there are no surveys available.
           </div>
         <?php endif; ?>
-      </div>
+          </div>
+     </div>
     </div>
+    
   </div>

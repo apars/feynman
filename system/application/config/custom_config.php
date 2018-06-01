@@ -11,6 +11,7 @@ $config["carousel_fit"]                     = "width:100%;height:832px";
 //Bootstrap
 $config['station_name']                     = 'station1';
 $config['img_path']                         = 'assets/images/general/';
+$config['main_back']                        = 'assets/images/general/mainback1.jpg';
 $config['button_back']                      = 'assets/images/general/submit.jpg';
 $config['csv_path']                         = 'assets/downloads/file.csv';
 $config['fav_icon']                         = 'assets/images/general/sample2.jpg';

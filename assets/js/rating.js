@@ -8,6 +8,7 @@ $('li').on('click', function(){
     $('li').removeClass('secondary-active');
     $(this).addClass('active');
     $(this).prevAll().addClass('secondary-active');
+    
 });
 
 $('a[data-slide="prev"]').click(function() {
@@ -57,3 +58,37 @@ function getCheckedValue( groupName ) {
     }
     return null;
 };  
+
+idleTimer = null;
+idleState = false;
+idleWait = 30000;
+
+(function ($) {
+
+    $(document).ready(function () {
+    
+        $('*').bind('mousemove keydown scroll', function () {
+        
+            clearTimeout(idleTimer);
+                    
+            if (idleState == true) { 
+                
+                // Reactivated event
+                //$("body").append("<p>Welcome Back.</p>");            
+            }
+            
+            idleState = false;
+            
+            idleTimer = setTimeout(function () { 
+                
+                // Idle Event
+                //$("body").append("<p>You've been idle for " + idleWait/1000 + " seconds.</p>");
+                redirectOnClick(base_url)
+
+                idleState = true; }, idleWait);
+        });
+        
+        $("body").trigger("mousemove");
+    
+    });
+}) (jQuery)

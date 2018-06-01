@@ -340,9 +340,12 @@ $query = $this->db->query('SELECT '
         array_push($insert_data, $response_data);
       }
     }
-
-    $this->db->insert_batch($surveyPrefix . "_response_answers", $insert_data);
-
+    //var_dump($insert_data);
+    if (count($insert_data) > 0)
+    {
+        $this->db->insert_batch($surveyPrefix . "_response_answers", $insert_data);
+    }
+    
     return null;
   }
 }
