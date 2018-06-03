@@ -13,7 +13,7 @@ $config["carousel_fit"]                     = "height:88vh";
 //Bootstrap
 $config['station_name']                     = 'station1';
 $config['img_path']                         = 'assets/images/general/';
-$config['main_back']                        = 'assets/images/general/mainback1.jpg';
+$config['main_back']                        = 'assets/images/general/mainback2.jpg';
 $config['button_back']                      = 'assets/images/general/submit.jpg';
 $config['exp_path']                         = 'assets/downloads/data_export_';
 $config['exp_ext']                          = '.csv';

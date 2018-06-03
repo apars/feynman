@@ -65,7 +65,7 @@
     </form>
     <div class="col-md-12">
   <?php elseif(isset($valid_survey) && $valid_survey && !(isset($survey_errors) && $survey_errors)): ?>
-      <h2 style="text-align: center"><br>All Done! <br><br>
+      <h2 class="introtext" style="text-align: center"><br>All Done! <br><br>
          Thank you for completing the survey.<br><br>
       </h2>
       <?php header("Refresh: 2; url=".base_url()); ?>
