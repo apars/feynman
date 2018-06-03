@@ -89,8 +89,9 @@ class Survey extends CI_Controller {
     $this->load->dbutil();
     $this->load->helper('file');
     //var_dump($result);
+    $outfile = $this->config->item("exp_path").date('m-d-Y_hia').$this->config->item("exp_ext");
     $csvdata = $this->dbutil->csv_from_result($result);
-        if ( ! write_file($this->config->item("csv_path"), $csvdata))
+        if ( ! write_file($outfile, $csvdata))
         {
             $data["export_result"] = "Export failed.";
         }

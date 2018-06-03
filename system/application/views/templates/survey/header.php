@@ -15,4 +15,5 @@
     <link rel="icon" href="<?php echo base_url().$this->config->item('fav_icon'); ?>"/>
     <script type="text/javascript"> var base_url = "<?php echo base_url(); ?>";</script>
   </head>
-  <body>
+  <body class="body">
+      <!--<div class="imageback"></div>-->

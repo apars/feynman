@@ -5,16 +5,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-$config["carousel_fit"]                     = "width:100%;height:832px";
+$config['company_name']                     = 'Full-Stack Developers International Inc.';
+$config['posted_by']                        = 'Richard Feynman';
+$config['posted_email']                     = 'rfeynman@fullstackint.com';
+$config["carousel_fit"]                     = "height:88vh";
 
 //Bootstrap
 $config['station_name']                     = 'station1';
 $config['img_path']                         = 'assets/images/general/';
 $config['main_back']                        = 'assets/images/general/mainback1.jpg';
 $config['button_back']                      = 'assets/images/general/submit.jpg';
-$config['csv_path']                         = 'assets/downloads/file.csv';
-$config['fav_icon']                         = 'assets/images/general/sample2.jpg';
+$config['exp_path']                         = 'assets/downloads/data_export_';
+$config['exp_ext']                          = '.csv';
+$config['fav_icon']                         = 'assets/images/general/fav_icon.png';
 
 $config['bootflat_css']                     = 'assets/css/bootflat.min.css';
 $config['style_css']                        = 'assets/css/style.css';

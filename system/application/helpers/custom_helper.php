@@ -14,7 +14,7 @@ if ( ! function_exists('getNavBrand'))
                   </a>";
         }
         elseif(!empty($logo_text)) {
-          return "<a class='navbar-brand' href=" . base_url() . $url . ">"
+          return "<a class='navbar-brand' style='color: white;' href=" . base_url() . $url . ">"
                    . $logo_text . 
                   "</a>";
 //            return "<a class='navbar-brand'>"
