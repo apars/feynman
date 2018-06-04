@@ -18,9 +18,10 @@ Rate us: 1 BAD to 5 BEST<br><br></h2>
               
               <button id="demo" type="submit" class="btn btn-lg btn-success pull-center" 
                       onclick="redirectOnClick('<?php echo base_url() . "questions/" . $survey->slug; ?>')" 
-                      style="height:100%;width:100%;font-size:5vw;border-radius: 25px;">
+                      style="height:100%;width:100%;font-size:3vw;border-radius: 25px;">
                           <?php echo $survey->title; ?>
               </button>
+              <!--800x480 = 3vw 1280x800 = 5vw -->
               
             <?php endforeach; ?>
           </div>

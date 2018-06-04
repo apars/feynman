@@ -8,7 +8,7 @@
 $config['company_name']                     = 'Full-Stack Developers International Inc.';
 $config['posted_by']                        = 'Richard Feynman';
 $config['posted_email']                     = 'rfeynman@fullstackint.com';
-$config["carousel_fit"]                     = "height:88vh";
+$config["carousel_fit"]                     = "height:78vh";/*1280x800=88vh 800x480=78vh*/
 
 //Bootstrap
 $config['station_name']                     = 'station1';
