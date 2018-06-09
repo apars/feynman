@@ -14,9 +14,13 @@ if ( ! function_exists('getNavBrand'))
                   </a>";
         }
         elseif(!empty($logo_text)) {
-          return "<a class='navbar-brand' style='color: white;' href=" . base_url() . $url . ">"
+          return "<a class='navbar-brand' style='color: white;' href=\"javascript:{}\" onclick=\"if(document.getElementById('mainsurveyform') != null)document.getElementById('mainsurveyform').submit(); return false;\"". ">"
                    . $logo_text . 
                   "</a>";
+              
+          /**return "<a class='navbar-brand' style='color: white;' href=" . base_url() . $url . ">"
+                   . $logo_text . 
+                  "</a>";**/
 //            return "<a class='navbar-brand'>"
  //                  . $logo_text . 
  //                 "</a>";

@@ -4,15 +4,15 @@
     <?php $j = 0 ?>
     <?php foreach($questions as $question): ?>
       <?php if($j == 0): ?>
-      <li data-target="#carouselExampleIndicators" data-slide-to="<?php echo $j ?>" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="<?php echo $j ?>" class="active" name="carindicate"></li>
       <?php else : ?>
-      <li data-target="#carouselExampleIndicators" data-slide-to="<?php echo $j ?>"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="<?php echo $j ?>" name="carindicate"></li>
       <?php endif; ?>
       <?php $j++ ?>
     <?php endforeach; ?>
       <li data-target="#carouselExampleIndicators" data-slide-to="<?php echo $j ?>"></li>
     </ol>
-    <form role="form" method="post" class="survey-form clearfix">
+    <form role="form" method="post" class="survey-form clearfix" id="mainsurveyform">
       <div class="carousel-inner">
     <?php $i = 0 ?>
     <?php foreach($questions as $question): ?>
@@ -65,6 +65,9 @@
     </form>
     <div class="col-md-12">
   <?php elseif(isset($valid_survey) && $valid_survey && !(isset($survey_errors) && $survey_errors)): ?>
+        <audio autoplay>
+          <source src="<?php echo base_url().$this->config->item('thanks_path'); ?>" type="audio/mpeg">
+          </audio>
       <h2 class="introtext" style="text-align: center"><br>All Done! <br><br>
          Thank you for completing the survey.<br><br>
       </h2>

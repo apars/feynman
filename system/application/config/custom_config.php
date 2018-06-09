@@ -5,13 +5,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-$config['company_name']                     = 'Full-Stack Developers International Inc.';
+$config['company_name']                     = 'FSDII';
 $config['posted_by']                        = 'Richard Feynman';
 $config['posted_email']                     = 'rfeynman@fullstackint.com';
 $config["carousel_fit"]                     = "height:78vh";/*1280x800=88vh 800x480=78vh*/
 
 //Bootstrap
 $config['station_name']                     = 'station1';
+$config['thanks_path']                      = 'assets/audios/ty.mp3';
 $config['img_path']                         = 'assets/images/general/';
 $config['main_back']                        = 'assets/images/general/mainback2.jpg';
 $config['button_back']                      = 'assets/images/general/submit.jpg';

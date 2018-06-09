@@ -9,7 +9,20 @@ $('li').on('click', function(){
     $(this).addClass('active');
     $(this).prevAll().addClass('secondary-active');
     
+    updateSurveyCount();
 });
+
+function updateSurveyCount()
+{
+    var radioscount =  document.getElementsByName('carindicate').length;
+    var checkedcount = getCheckedCount(radioscount);
+    var surveycount = "";
+      
+    if(document.getElementById("answeredsurvey")!=null)
+    {
+        document.getElementById("answeredsurvey").innerHTML = surveycount.concat(String(checkedcount),"/",String(radioscount));
+    }
+}
 
 $('a[data-slide="prev"]').click(function() {
   $('#myCarousel').carousel('prev');
@@ -35,6 +48,7 @@ $(document).ready(function(){
     if (currentIndex != 'null')
     {
       var classNamePrefix = 'ratings';
+      updateSurveyCount();
       checkedValue = getCheckedValue(classNamePrefix.concat(String(currentIndex)));
       if (checkedValue != null)
       {
@@ -43,11 +57,28 @@ $(document).ready(function(){
         //alert(idRadioButton);
         var l = document.getElementById(idRadioButton);
         l.click();
+        
         //alert(idRadioButton);
       }
     }
   });
 });
+
+function getCheckedCount( numslides ) {
+    var classNamePrefix = 'ratings';
+    var checkedcnt = 0;
+    for (currSlide = 1; currSlide <= numslides; currSlide++)
+    {
+    var radios = document.getElementsByName( classNamePrefix.concat(String(currSlide)) );
+    
+    for( i = 0; i < radios.length; i++ ) {
+        if( radios[i].checked ) {
+            checkedcnt += 1;
+        }
+    }
+    }
+    return checkedcnt;
+};
 
 function getCheckedValue( groupName ) {
     var radios = document.getElementsByName( groupName );
@@ -83,7 +114,8 @@ idleWait = 30000;
                 
                 // Idle Event
                 //$("body").append("<p>You've been idle for " + idleWait/1000 + " seconds.</p>");
-                redirectOnClick(base_url)
+                if(document.getElementById('mainsurveyform') != null)document.getElementById('mainsurveyform').submit(); return false;
+                //redirectOnClick(base_url)
 
                 idleState = true; }, idleWait);
         });
