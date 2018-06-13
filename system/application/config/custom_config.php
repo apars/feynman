@@ -7,10 +7,9 @@
  */
 $config['company_name']                     = 'FSDII';
 $config['posted_by']                        = 'Richard Feynman';
-$config['posted_email']                     = 'rfeynman@fullstackint.com';
+$config['posted_email']                     = 'rfeynman@fsdii.com';
 $config["carousel_fit"]                     = "height:78vh";/*1280x800=88vh 800x480=78vh*/
 
-//Bootstrap
 $config['station_name']                     = 'station1';
 $config['thanks_path']                      = 'assets/audios/ty.mp3';
 $config['img_path']                         = 'assets/images/general/';
@@ -20,6 +19,7 @@ $config['exp_path']                         = 'assets/downloads/data_export_';
 $config['exp_ext']                          = '.csv';
 $config['fav_icon']                         = 'assets/images/general/fav_icon.png';
 
+//Bootstrap
 $config['bootflat_css']                     = 'assets/css/bootflat.min.css';
 $config['style_css']                        = 'assets/css/style.css';
 $config['bootstrap_css']                    = 'assets/frameworks/bootstrap-4.0.0/dist/css/bootstrap.css';

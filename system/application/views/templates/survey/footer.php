@@ -16,7 +16,7 @@
                     <a href="#" class="fab fa-google"></a>
                     <a href="#" class="fab fa-instagram"></a> 
                     <?php if($active_surveys != ""): ?>
-                    <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Export</button>
+                    <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">E</button>
                     <?php endif; ?>
                     </p>
                     
@@ -24,28 +24,28 @@
                 </div>
             </div>
             <!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+            <div id="myModal" class="modal fade" role="dialog">
+              <div class="modal-dialog">
 
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-          <h4 class="modal-title">Export Data</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        
-      </div>
-      <div class="modal-body">
-        <p>Please insert USB stick and hit OK button.</p>
-      </div>
-      <div class="modal-footer">
-          <?php foreach($active_surveys as $survey): ?>
-          <button type="button" class="btn btn-default" onclick="redirectOnClick('<?php echo base_url().$this->config->item('export_url').'/'.$survey->slug; ?>')" >OK</button>
-          <?php endforeach; ?>
-      </div>
-    </div>
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                      <h4 class="modal-title">Export Data</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
 
-  </div>
-</div>
+                  </div>
+                  <div class="modal-body">
+                    <p>Please insert USB stick and hit OK button.</p>
+                  </div>
+                  <div class="modal-footer">
+                      <?php foreach($active_surveys as $survey): ?>
+                      <button type="button" class="btn btn-default" onclick="redirectOnClick('<?php echo base_url().$this->config->item('export_url').'/'.$survey->slug; ?>')" >OK</button>
+                      <?php endforeach; ?>
+                  </div>
+                </div>
+
+              </div>
+            </div>
         </footer>
 
         <!--<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/custom.js"></script>-->
